@@ -1,0 +1,78 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<groupId>com.joepritzel</groupId>
+	<artifactId>problem</artifactId>
+	<version>0.1</version>
+	<packaging>jar</packaging>
+
+	<name>Scala-99-Problems</name>
+	<description>Solutions to 99 Scala problems.</description>
+	<url>https://github.com/Joe0/Scala-99-Problems</url>
+
+	<licenses>
+		<license>
+			<name>MIT</name>
+			<url>https://github.com/Joe0/Scala-99-Problems/blob/master/LICENSE</url>
+		</license>
+	</licenses>
+
+	<developers>
+		<developer>
+			<name>Joe Pritzel</name>
+			<email>joe.pritzel0@gmail.com</email>
+			<timezone>-6</timezone>
+		</developer>
+	</developers>
+
+	<properties>
+		<scala.version>2.10.2</scala.version>
+		<jdk.version>1.7</jdk.version>
+	</properties>
+
+	<issueManagement>
+		<url>https://github.com/Joe0/Scala-99-Problems/issues</url>
+		<system>GitHub Issues</system>
+	</issueManagement>
+
+	<scm>
+		<url>https://github.com/Joe0/Scala-99-Problems</url>
+		<connection>scm:git:git://github.com/Joe0/Scala-99-Problems.git</connection>
+		<developerConnection>scm:git:git@github.com:Joe0/Scala-99-Problems.git</developerConnection>
+	</scm>
+
+	<dependencies>
+		<dependency>
+			<groupId>org.scala-lang</groupId>
+			<artifactId>scala-library</artifactId>
+			<version>${scala.version}</version>
+		</dependency>
+	</dependencies>
+
+	<build>
+		<sourceDirectory>src/main/scala</sourceDirectory>
+		<testSourceDirectory>src/test/scala</testSourceDirectory>
+		<plugins>
+			<plugin>
+				<groupId>net.alchim31.maven</groupId>
+				<artifactId>scala-maven-plugin</artifactId>
+				<version>3.1.5</version>
+				<executions>
+					<execution>
+						<goals>
+							<goal>compile</goal>
+						</goals>
+					</execution>
+				</executions>
+				<configuration>
+					<args>
+						<arg>-feature</arg>
+					</args>
+					<scalaVersion>${scala.version}</scalaVersion>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+
+</project>
